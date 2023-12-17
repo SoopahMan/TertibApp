@@ -12,5 +12,9 @@ class GlobalController
         return Helper::redirect('login');
     }
 
+    public function addMahasiswa()
+    {
+        return Helper::view('admin/master/add/addMahasiswa');   
+    }
    
 }

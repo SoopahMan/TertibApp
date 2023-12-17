@@ -30,8 +30,21 @@ $router->get('/^mahasiswa\/dashboard$/', ['DosenController@dashboard']);
 
 
 $router->get('/^admin\/dashboard$/', ['AdminController@dashboard']);
+
+//Menu Master Mahasiswa
 $router->get('/^admin\/dataMahasiswa$/', ['ManageMhsController@manageMahasiswa']);
+
+$router->get('/^admin\/addMahasiswa$/', ['GlobalController@addMahasiswa']);
+
+//Menu Master Dosen
 $router->get('/^admin\/dataDosen$/', ['ManageDosenController@manageDosen']);
+
+//Menu Master Pelanggaran
+$router->get('/^admin\/dataPelanggaran$/', ['ManageTatibController@managePelanggaran']);
+
+//Menu Master Kelas - Admin
+$router->get('/^admin\/dataKelas$/', ['ManageKelasController@manageKelas']);
+
 
 
 //admin routes

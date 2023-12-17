@@ -4,41 +4,37 @@ Helper::importView("admin/partials/nav.view.php");
 <html>
     <body>
         <div class="conatiner mt-3">
-            <a href="addMahasiswa" class="btn btn-primary mb-3"> Tambah user</a>
+            <a href="nil" class="btn btn-primary mb-3"> Tambah Pelanggaran</a>
 
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">NIM</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Kelas</th>
+                        <th scope="col">Nama Pelanggaran</th>
+                        <th scope="col">Level</th>
+                        <th scope="col">Keterangan</th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php
                 /**
-                 * @var MahasiswaModel[] $mahasiswa
+                 * @var PelanggaranModel[] $pelanggaran
                  */
 
-                 for ($i = 0; $i < count($mahasiswa); $i++):$user = $mahasiswa[$i];
+                 for ($i = 0; $i < count($pelanggaran); $i++):$user = $pelanggaran[$i];
                  ?>
                 <tr>
                     <td scope="row">
                         <?= $i +1; ?>
                     </td>
                     <td scope="row">
-                        <?= $user->getNim(); ?>
+                        <?= $user->getNamaPelanggaran(); ?>
                     </td>
                     <td scope="row">
-                        <?= $user->getNamaMhs(); ?>
+                        <?= $user->getLevel(); ?>
                     </td>
                     <td scope="row">
-                        <?= $user->getAlamat(); ?>
-                    </td>
-                    <td scope="row">
-                        <?= $user->getIdKelas(); ?>
+                        <?= $user->getKeterangan(); ?>
                     </td>
                 </tr>
                 <?php endfor; ?>
